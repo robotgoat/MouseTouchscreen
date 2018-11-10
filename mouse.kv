@@ -1,0 +1,25 @@
+<ButtonGame>:
+  orientation: "horizontal"
+  
+  # Create button 1
+  Button:
+    id: left_butt
+    background_color: [0,0,0,0]
+    #text: "My loc is %s" %self.pos
+    on_press: root.circle_press()
+    Image:
+      size: (200, 200) 
+      source: "circle.png"
+      pos: ((self.parent.x +(self.parent.width - self.width)/2), (self.parent.height - self.height)/2)
+
+  # Create button 2
+  Button:
+    id: right_butt
+    background_color: [0,0,0,0]
+    text: "And my loc is %s" %self.x
+    on_press: root.square_press()
+    Image:
+      size: (200, 200)
+      source: "square.png"
+      pos: ((self.parent.x + (self.parent.width - self.width)/2), (self.parent.height - self.height)/2)
+      #pos: (450, 100)
